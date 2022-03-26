@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: rgb(26, 19, 47);
+  background: linear-gradient(
+    0deg,
+    rgba(26, 19, 47, 1) 0%,
+    rgba(114, 102, 119, 1) 29%,
+    rgba(247, 226, 226, 1) 100%
+  );
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.drum-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 16px;
+
+  font-weight: bold;
+  font-size: 24px;
+  color: #1a132f;
+}
+
+#drum-machine {
+  /* */
+
+  margin-top: 64px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+  width: 320px;
+  background-color: transparent;
+  border: 2px solid #1a132f;
+  border-radius: 16px;
+
+  color: #f7e2e2;
+  padding: 16px;
+}
+
+.drum-pad-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 8px;
+
+  /* From https://css.glass */
+  background: rgba(26, 19, 47, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(26, 19, 47, 0.2);
+
+  font-weight: bold;
+  font-size: 16px;
+
+  transition: all 0.3s;
+}
+
+#display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100px;
+
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  #drum-machine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 0;
+  }
+}
+
+.drum-pad-active {
+  /* From https://css.glass */
+  background: rgba(247, 226, 226, 0.73);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(247, 226, 226, 0.3);
+
+  color: #1a132f;
+
+  transition: all 0.3s;
+}
